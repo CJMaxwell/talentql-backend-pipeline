@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import howoldRoutes from './routes/howoldRoutes';
+import apiLimit from './middleware/apiLimit';
 
 dotenv.config();
 
@@ -12,9 +13,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.use(apiLimit);
 app.use(howoldRoutes);
 
 app.get('/', (req: Request, res: Response) => res.send('TalentQL Assessment.'));
+app.get('/ip', (request, response) => response.send(request.ip))
 
 
 app.listen(process.env.PORT || 4500, () => console.log(`Server running on ${process.env.PORT}`))
