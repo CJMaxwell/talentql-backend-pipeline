@@ -2,7 +2,10 @@
   "name": "talentql-backend-pipeline",
   "version": "1.0.0",
   "description": "Build and deploy a very simple API that does the following",
-  "main": "index.js",
+  "main": "app.ts",
+  "engines": {
+    "node": "16.16.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/app.js",
