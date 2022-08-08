@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/app.js",
     "dev": "nodemon --exec npx ts-node src/app.ts",
-    "build": "npx tsc -p .",
+    "build": "npx --package typescript -- tsc",
     "prebuild": "rimraf dist",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
