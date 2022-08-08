@@ -16,8 +16,6 @@ class Howold {
 
             let age = currentYear - birthYear;
 
-            console.log(age, 'Calc')
-
             res.status(200).json({
                 age
             });
