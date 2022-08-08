@@ -17,7 +17,5 @@ app.use(apiLimit);
 app.use(howoldRoutes);
 
 app.get('/', (req: Request, res: Response) => res.send('TalentQL Assessment.'));
-app.get('/ip', (request, response) => response.send(request.ip))
-
 
 app.listen(process.env.PORT || 4500, () => console.log(`Server running on ${process.env.PORT}`))
