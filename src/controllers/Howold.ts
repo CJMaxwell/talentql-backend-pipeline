@@ -4,6 +4,7 @@ class Howold {
     static calculateAge(req: Request, res: Response) {
         try {
             const { dob } = req.params;
+
             const birthYear = new Date(dob).getFullYear();
 
             if (isNaN(birthYear)) {
@@ -12,7 +13,16 @@ class Howold {
                 });
                 return;
             };
+
             const currentYear = new Date().getFullYear();
+
+            if (birthYear > currentYear) {
+                res.status(400).json({
+                    message: 'You cannot be born in the futures'
+                });
+
+                return;
+            }
 
             let age = currentYear - birthYear;
 
@@ -23,8 +33,7 @@ class Howold {
 
         } catch (error) {
             res.status(500).json({
-                // @ts-ignore
-                error: error.RangeError
+                message: 'An error occured'
             })
         }
     }
