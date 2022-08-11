@@ -5,6 +5,6 @@ import apiRateLimit from "../../middleware/apiRateLimit";
 
 const howoldRoutes = Router();
 
-howoldRoutes.get('/howold/:dob', apiRateLimit, Howold.calculateAge);
+howoldRoutes.get("/howold/:dob", apiRateLimit, Howold.calculateAge);
 
 export default howoldRoutes;

@@ -9,7 +9,7 @@ class Howold {
 
             if (isNaN(birthYear)) {
                 res.status(400).json({
-                    message: 'Bad date format. Use this format yyyy-mm-dd or yy-mm-dd'
+                    message: "Bad date format. Use this format yyyy-mm-dd or yy-mm-dd"
                 });
                 return;
             };
@@ -18,7 +18,7 @@ class Howold {
 
             if (birthYear > currentYear) {
                 res.status(400).json({
-                    message: 'You cannot be born in the futures'
+                    message: "You cannot be born in the futures"
                 });
 
                 return;
@@ -33,7 +33,7 @@ class Howold {
 
         } catch (error) {
             res.status(500).json({
-                message: 'An error occured'
+                message: "An error occured"
             })
         }
     }

@@ -1,8 +1,8 @@
-import express, { Request, Response } from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
+import express, { Request, Response } from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
-import howoldRoutes from './routes/howoldRoutes';
+import howoldRoutes from "./routes/howoldRoutes";
 
 dotenv.config();
 
@@ -14,6 +14,6 @@ app.use(cors());
 
 app.use(howoldRoutes);
 
-app.get('/', (req: Request, res: Response) => res.send('TalentQL Assessment.'));
+app.get("/", (req: Request, res: Response) => res.send("TalentQL Assessment."));
 
 app.listen(process.env.PORT || 4500, () => console.log(`Server running on port ${process.env.PORT}`))
