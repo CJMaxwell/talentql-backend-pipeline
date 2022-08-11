@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bc34a002ccf1463a8d5e75fdbf91996f)](https://app.codacy.com/gh/CJMaxwell/talentql-backend-pipeline?utm_source=github.com&utm_medium=referral&utm_content=CJMaxwell/talentql-backend-pipeline&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/077a6968d8a84accad5c083635d0991b)](https://www.codacy.com/gh/CJMaxwell/talentql-backend-pipeline/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CJMaxwell/talentql-backend-pipeline&amp;utm_campaign=Badge_Grade)
 # Backend Assessment
 
